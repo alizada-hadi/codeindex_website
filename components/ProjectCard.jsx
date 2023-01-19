@@ -15,14 +15,14 @@ export default function ProjectCard({
   preview,
 }) {
   return (
-    <div className= "w-full  bg-white rounded-xl  mb-2 border-2 shadow-custom shadow-gray-100">
+    <div className="w-full bg-white rounded-xl mb-2 dark:bg-gray-800 dark:shadow-none border-2 shadow-custom shadow-gray-100">
       <img
         src={urlFor(image)}
         width={300}
         height={300}
         className="w-full h-[15rem] object-fill rounded-xl shadow-md"
       />
-      <h1 className="pt-5 text-2xl font-semibold font-inter text-gray-700 mx-5">
+      <h1 className="pt-5 text-2xl font-semibold font-inter dark:text-slate-200 text-gray-700 mx-5">
         {title}
       </h1>
       <p className="my-2 px-5 text-md text-justify font-inter">{description}</p>
@@ -30,7 +30,7 @@ export default function ProjectCard({
         {techs.map((tech) => (
           <span
             key={tech}
-            className=" border-2 rounded-lg px-2  py-1 text-sm font-semibold font-inter bg-gray-100 text-gray-800 tracking-wide"
+            className="rounded-md px-2 md:mx-1 mx-3 py-1 text-sm font-semibold dark:bg-transparent dark:text-slate-200 dark:border-2 dark:font-medium font-inter bg-gray-100 text-gray-800 tracking-wide"
           >
             {tech}
           </span>

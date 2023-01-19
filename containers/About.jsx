@@ -8,9 +8,12 @@ import { urlFor } from "../client";
 export default function About({ about }) {
   return (
     <>
-      <section className="min-h-screen  md:px-4 w-full overflow-x-hidden max-w-7xl mx-auto justify-center"  id="about">
+      <section
+        className="min-h-screen  md:px-4 w-full overflow-x-hidden max-w-7xl mx-auto justify-center"
+        id="about"
+      >
         <div className="w-full lg:mt-2 md:mt-2">
-          <h1 className="font-inter md:text-4xl text-2xl px-6 font-bold text-gray-800">
+          <h1 className="font-inter md:text-4xl text-2xl px-6 dark:text-slate-200 font-bold text-gray-800">
             About{" "}
             <Link href="/">
               <span className="text-[#0BBEF2] ">Code</span>Index
@@ -18,23 +21,23 @@ export default function About({ about }) {
           </h1>
           <div className="lg: grid lg:grid-cols-2 flex-row px-7 gap-16">
             <div className="">
-              <p className="text-justify lg:mt-12 md:mt-6 font-inter font-medium text-gray-800 tracking-wide text-lg">
+              <p className="text-justify lg:mt-12 dark:text-slate-200 md:mt-6 font-inter font-medium text-gray-800 tracking-wide text-lg">
                 {about[0].description}
               </p>
-              <h3 className="mt-3 mb-2 text-xl font-inter font-semibold text-gray-800">
+              <h3 className="mt-3 mb-2 text-xl dark:text-slate-200 font-inter font-semibold text-gray-800">
                 Our Services
               </h3>
               {about[0].services.map((service) => (
                 <ServiceCard
-                key={service._key}
-                image={service.icon}
-                title={service.title}
-                description={service.description}
-              />
+                  key={service._key}
+                  image={service.icon}
+                  title={service.title}
+                  description={service.description}
+                />
               ))}
             </div>
-            <div  >
-              <img className="w-full " src={urlFor(about[0].image)}  />
+            <div>
+              <img className="w-full " src={urlFor(about[0].image)} />
             </div>
           </div>
         </div>

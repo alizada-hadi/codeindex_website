@@ -25,6 +25,7 @@ export default function Home({ about, team, projects }) {
         <Projects projects={projects} />
         <Blog />
         <Contact />
+        <Footer />
       </main>
     </>
   );

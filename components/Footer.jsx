@@ -10,7 +10,7 @@ import {
 
 export default function Footer() {
   return (
-    <div className=" mt-12 bg-[#3C4862] dark:bg-black px-16">
+    <div className=" mt-72 bg-[#3C4862] dark:bg-black  px-16">
       <section className="grid lg:grid-cols-5   md:grid-cols-3 mx-auto pt-16 gap-8 pb-5">
         <div className="flex flex-col justify-between">
           <div>
@@ -109,10 +109,9 @@ export default function Footer() {
               { icon: <AiOutlineFacebook />, link: "" },
               { icon: <AiOutlineGithub />, link: "" },
             ].map((item) => {
-              const { icon, link, index } = item;
+              const { icon, link } = item;
               return (
                 <Link
-                  key={index}
                   className="text-white text-5xl text-justify"
                   href={`${link}`}
                 >

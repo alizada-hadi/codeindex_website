@@ -15,7 +15,7 @@ export default function Navbar() {
       variants={navVariants}
       initial="hidden"
       whileInView="show"
-      className="w-full justify-center fixed dark:bg-gray-800 bg-white mx-auto "
+      className="w-full justify-center dark:bg-gray-800 bg-white mx-auto "
     >
       <div className="justify-between px-4 mx-auto lg:max-w-7xl md:items-center md:flex md:px-8">
         <div>

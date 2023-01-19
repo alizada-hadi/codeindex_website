@@ -8,10 +8,10 @@ export default function Team({ team }) {
   return (
     <div className="min-h-screen overflow-x-hidden pb-10" id="team">
       <div className="lg:px-32 overflow-hidden w-full mt-32">
-        <h1 className="font-inter text-5xl font-semibold px-4 text-gray-800">
+        <h1 className="font-inter text-5xl font-semibold dark:text-slate-200 px-4 text-gray-800">
           {team[0].title}
         </h1>
-        <p className="text-lg lg:w-[40rem] font-inter mt-6 text-gray-800 px-4 indent-8 text-justify font-medium">
+        <p className="text-lg lg:w-[40rem] font-inter mt-6 dark:text-slate-200 text-gray-800 px-4 indent-8 text-justify font-medium">
           {team[0].description}
         </p>
 

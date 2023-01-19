@@ -4,7 +4,7 @@ import Link from "next/link";
 
 export default function Blog() {
   return (
-    <div className=" md:h-[35rem] lg:px-32  w-full pb-6 "  id="blog">
+    <div className=" md:h-[35rem] lg:px-32  w-full pb-6 " id="blog">
       <section className="pt-[5rem] md:grid md:grid-cols-2 ">
         <div className="col-span-1 w-full md">
           <Image
@@ -16,7 +16,7 @@ export default function Blog() {
           />
         </div>
         <div>
-          <p className="md:mt-32 px-3 mb-10 text-xl font-inter font-semibold text-gray-700 tracking-wider text-justify">
+          <p className="md:mt-32 px-3 mb-10 text-xl font-inter dark:text-slate-200 font-semibold text-gray-700 tracking-wider text-justify">
             Embrace every opportunity to learn and enhance your knowledge, for
             it is the foundation of personal and professional growth.
           </p>
