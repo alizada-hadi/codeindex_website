@@ -109,9 +109,10 @@ export default function Footer() {
               { icon: <AiOutlineFacebook />, link: "" },
               { icon: <AiOutlineGithub />, link: "" },
             ].map((item) => {
-              const { icon, link } = item;
+              const { icon, link, index } = item;
               return (
                 <Link
+                  key={index}
                   className="text-white text-5xl text-justify"
                   href={`${link}`}
                 >
