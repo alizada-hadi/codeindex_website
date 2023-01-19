@@ -37,14 +37,14 @@ export default function Projects({ projects }) {
         </h1>
 
         <div className="w-full">
-          <div className="flex flex-row flex-wrap lg:space-x-4 items-center justify-center mt-5">
+          <div className="flex flex-row flex-wrap lg:space-x-4 px-2 items-center justify-center mt-5">
             {["All", "Mobile App", "Web", "Desktop", "UI/UX"].map((item) => (
               <div
                 onClick={() => handleWorkFilter(item)}
                 className={`${
                   item === selectedCategory
-                    ? "px-3 py-1 border-2 rounded-full font-inter dark:text-slate-200 text-lg font-semibold  cursor-pointer bg-slate-700 text-white hover:bg-slate-700 hover:text-white transition duration-200 ease-in-out"
-                    : "px-3 py-1 border-2 rounded-full font-inter dark:text-slate-200 text-lg font-semibold text-gray-700 cursor-pointer hover:bg-slate-700 hover:text-white transition duration-200 ease-in-out"
+                    ? "px-3 py-1 mx-1 lg:mx-[1.2px] mt-1 border-2 rounded-full font-inter dark:text-slate-200 text-lg font-semibold  cursor-pointer bg-slate-700 text-white hover:bg-slate-700 hover:text-white transition duration-200 ease-in-out"
+                    : "px-3 py-1 mx-1 lg:mx-[1.2px] mt-1 border-2 rounded-full font-inter dark:text-slate-200 text-lg font-semibold text-gray-700 cursor-pointer hover:bg-slate-700 hover:text-white transition duration-200 ease-in-out"
                 }`}
                 key={item}
               >

@@ -32,9 +32,9 @@ export default function Navbar() {
                 onClick={() => setNavbar(!navbar)}
               >
                 {navbar ? (
-                  <AiOutlineClose className="text-2xl font-bold" />
+                  <AiOutlineClose className="text-2xl font-bold dark:text-slate-200" />
                 ) : (
-                  <HiOutlineMenuAlt1 className="text-2xl font-bold rotate-180 cursor-pointer" />
+                  <HiOutlineMenuAlt1 className="text-2xl font-bold dark:text-slate-200 rotate-180 cursor-pointer" />
                 )}
               </button>
             </div>

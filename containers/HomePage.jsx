@@ -10,10 +10,10 @@ export default function HomePage() {
   return (
     <div className="h-screen">
       <Navbar />
-      <div className="2xl:px-10 xl:px-8 lg:px-4 md:px-0 grid lg:grid-cols-4 md:grid-cols-2 grid-cols-1  max-w-7xl mx-auto">
+      <div className="2xl:px-10 xl:px-8 lg:px-4 md:px-0 mb-10 grid lg:grid-cols-4 md:grid-cols-2 grid-cols-1  max-w-7xl mx-auto">
         <div className="lg:col-span-2">
           <section className="mt-10">
-            <div className="lg:pt-[12rem] md:pt-[8rem] pt-16 z-50">
+            <div className="lg:pt-[12rem] md:pt-[8rem] pt-1 z-50">
               <motion.h1
                 whileInView={{ x: [-100, 0] }}
                 transition={{ delay: 0.5, type: "spring", stiffness: 80 }}
@@ -25,7 +25,7 @@ export default function HomePage() {
                 </p>
               </motion.h1>
 
-              <div className="text-justify ">
+              <div className="text-justify mt-5 ">
                 <p className="dark:text-slate-200 lg:text-xl text-lg text-gray-700 font-medium  font-inter lg:mt-10 px-4 text-start md:px-2 xl:w-[40rem]">
                   We strive to make your work easier by working hard to deliver
                   high-quality solutions
@@ -43,7 +43,7 @@ export default function HomePage() {
             </div>
           </section>
         </div>
-        <div className="-mt-10">
+        <div className="lg:-mt-10 mt-10">
           <motion.div className="lg:absolute xl:right-30 md:pt-[4rem] lg:right-26 pt-10 -z-10">
             <motion.img
               whileInView={{ y: [-100, 0] }}
@@ -54,7 +54,7 @@ export default function HomePage() {
                 stiffness: 90,
               }}
               src="/images/banner.png"
-              className="xl:w-[42rem] xl:px-6 lg:-mt-[2rem] lg:w-[30rem] md:w-[44rem] sm:w-[30rem] object-cover "
+              className="xl:w-[42rem] xl:px-6 lg:mt-[2rem] lg:w-[30rem] md:w-[44rem] sm:w-[30rem] object-cover "
             />
           </motion.div>
         </div>
