@@ -25,10 +25,10 @@ export default function TeamCard({ image, name, position, socialAccounts }) {
             {position}
           </h6>
           <div className=" justify-evenly mt-5">
-            {socialAccounts.map((item) => {
+            {socialAccounts.map((item, index) => {
               const { facebook, instagram, linkedin, github } = item;
               return (
-                <div className="flex">
+                <div className="flex" key={index}>
                   {instagram ? (
                     <Link href={`${instagram}`}>
                       {" "}
