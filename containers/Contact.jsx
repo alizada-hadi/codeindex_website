@@ -33,7 +33,7 @@ export default function Contact() {
       method: "POST",
       body: JSON.stringify(contact),
       headers: {
-        "Content-type": "application/json",
+        "Content-Type": "application/json",
       },
     }).then(() => {
       setLoading(false);

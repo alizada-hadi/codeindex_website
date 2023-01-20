@@ -14,8 +14,6 @@ export default function Team({ team }) {
     updateSize();
   });
 
-  console.log(width);
-
   return (
     <div className="min-h-screen overflow-x-hidden pb-10" id="team">
       <div className="lg:px-32 overflow-hidden w-full mt-32">
