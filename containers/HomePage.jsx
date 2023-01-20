@@ -25,20 +25,24 @@ export default function HomePage() {
                 </p>
               </motion.h1>
 
-              <div className="text-justify mt-5 ">
-                <p className="dark:text-slate-200 lg:text-xl text-lg text-gray-700 font-medium  font-inter lg:mt-10 px-4 text-start md:px-2 xl:w-[40rem]">
+              <div className="text-justify mt-5">
+                <motion.p
+                  whileInView={{ x: [-100, 0] }}
+                  transition={{ delay: 0.75, type: "spring" }}
+                  className="dark:text-slate-200 lg:text-xl text-lg text-gray-700 font-medium  font-inter lg:mt-10 px-4 text-start md:px-2 xl:w-[40rem]"
+                >
                   We strive to make your work easier by working hard to deliver
                   high-quality solutions
-                </p>
+                </motion.p>
 
-                <button
+                <motion.button
                   whileInView={{ x: [-100, 0] }}
                   transition={{ duration: 0.5 }}
                   className="flex items-center mt-8  py-3 px-8 tracking-wide border-2 rounded-lg text-gray-700 mx-2 bg-white font-inter text-xl font-semibold hover:shadow-sm hover:border-cyan-400 transition duration-200 ease-linear"
                 >
                   Get Started{" "}
                   <BsArrowDownShort className="text-3xl ml-2 animate-bounce" />
-                </button>
+                </motion.button>
               </div>
             </div>
           </section>

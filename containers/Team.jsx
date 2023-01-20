@@ -1,10 +1,21 @@
-import React from "react";
+import React, { useEffect, useState, useLayoutEffect } from "react";
 import { TeamCard } from "../components";
 
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
 import { Carousel } from "react-responsive-carousel";
 
 export default function Team({ team }) {
+  const [width, setWidth] = useState(0);
+  useLayoutEffect(() => {
+    function updateSize() {
+      setWidth(window.innerWidth);
+    }
+    window.addEventListener("resize", updateSize);
+    updateSize();
+  });
+
+  console.log(width);
+
   return (
     <div className="min-h-screen overflow-x-hidden pb-10" id="team">
       <div className="lg:px-32 overflow-hidden w-full mt-32">
@@ -20,7 +31,7 @@ export default function Team({ team }) {
           autoPlay={true}
           infiniteLoop={true}
           interval={3000}
-          // centerSlidePercentage={50}
+          centerSlidePercentage={width > 1400 ? 50 : 100}
           swipeable={true}
           showStatus={false}
           showIndicators={false}
