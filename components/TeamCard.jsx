@@ -11,7 +11,7 @@ import {
 export default function TeamCard({ image, name, position, socialAccounts }) {
   return (
     <div className="md:w-[35rem] w-[18rem] bg-gray-100 dark:bg-gray-900 md:h-[18rem] -px-16 h-[25rem] mx-auto rounded-2xl mt-10">
-      <section className="flex md:flex-row flex-col items-start justify-center mr-10 lg:space-x-16 space-x-32">
+      <section className="flex md:flex-row flex-col items-start justify-center mr-10 space-x-16 ">
         <div>
           <div className="md:w-48 md:h-48 w-40 h-40 rounded-full lg:left-3 relative left-[40%] bg-white mt-8">
             <img src={urlFor(image)} className="w-full h-full rounded-full" />
