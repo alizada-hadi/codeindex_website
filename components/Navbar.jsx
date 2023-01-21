@@ -15,7 +15,9 @@ export default function Navbar() {
       variants={navVariants}
       initial="hidden"
       whileInView="show"
-      className="w-full justify-center dark:bg-gray-800 bg-white mx-auto "
+      className={`w-full justify-center dark:bg-gray-800 bg-white mx-auto ${
+        navbar ? "h-screen" : ""
+      }`}
     >
       <div className="justify-between px-4 mx-auto lg:max-w-7xl md:items-center md:flex md:px-8">
         <div>
@@ -47,11 +49,12 @@ export default function Navbar() {
             }`}
           >
             <ul
-              className={`items-center justify-center space-y-8 md:flex md:space-x-6 md:space-y-0`}
+              className={`items-center justify-center space-y-8 w-full md:flex md:space-x-6 md:space-y-0`}
             >
               {navigations.map((navigation) => (
-                <li key={navigation} className="">
+                <li key={navigation} className="w-full">
                   <Link
+                    onClick={() => setNavbar(false)}
                     href={`#${navigation}`}
                     className="font-inter dark:text-slate-200 capitalize text-md tracking-wide font-medium hover:border-b-[2.5px] border-cyan-900 transition duration-500 ease-in-out"
                   >
