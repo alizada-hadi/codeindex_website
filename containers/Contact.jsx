@@ -103,7 +103,7 @@ export default function Contact() {
                       class="block w-full bg-white dark:bg-gray-700 focus:outline-none focus:shadow-outline border border-gray-300 rounded-md py-3 px-3  appearance-none leading-normal focus:border-blue-400"
                     />
                     <label
-                      for="name"
+                      htmlFor="name"
                       class="absolute top-3 left-2 text-lg text-gray-800 pointer-events-none transition duration-200 ease-in-out px-2 text-grey-darker font-inter"
                     >
                       Name
@@ -121,7 +121,7 @@ export default function Contact() {
                       class="block w-full bg-white dark:bg-gray-700 focus:outline-none focus:shadow-outline border border-gray-300 rounded-md py-3 px-3  appearance-none leading-normal focus:border-blue-400"
                     />
                     <label
-                      for="email"
+                      htmlFor="email"
                       class="absolute top-3 left-2 text-lg text-gray-800 pointer-events-none transition duration-200 ease-in-out px-2 text-grey-darker font-inter"
                     >
                       Email
@@ -138,7 +138,7 @@ export default function Contact() {
                       class="block w-full bg-white dark:bg-gray-700 focus:outline-none focus:shadow-outline border border-gray-300 rounded-md py-3 px-3  appearance-none leading-normal focus:border-blue-400"
                     />
                     <label
-                      for="number"
+                      htmlFor="number"
                       class="absolute top-3 left-2 text-lg text-gray-800 pointer-events-none transition duration-200 ease-in-out px-2 text-grey-darker font-inter"
                     >
                       Number
@@ -155,7 +155,7 @@ export default function Contact() {
                       class="block w-full bg-white dark:bg-gray-700 focus:outline-none focus:shadow-outline border border-gray-300 rounded-md py-3 px-3  appearance-none leading-normal focus:border-blue-400"
                     />
                     <label
-                      for="message"
+                      htmlFor="message"
                       class="absolute top-3 left-2 text-gray-800 text-lg pointer-events-none transition duration-200 ease-in-out px-2 text-grey-darker font-inter"
                     >
                       Message
