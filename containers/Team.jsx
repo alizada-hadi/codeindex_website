@@ -15,7 +15,7 @@ export default function Team({ team }) {
   });
 
   return (
-    <div className="min-h-screen overflow-x-hidden pb-10" id="team">
+    <div className=" overflow-x-hidden pb-10" id="team">
       <div className="lg:px-32 overflow-hidden w-full mt-32">
         <h1 className="font-inter text-5xl font-semibold dark:text-slate-200 px-4 text-gray-800">
           {team[0].title}

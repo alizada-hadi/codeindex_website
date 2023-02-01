@@ -8,7 +8,7 @@ import { slideIn, textContainer } from "../utils/motion";
 
 export default function HomePage() {
   return (
-    <div className="h-screen">
+    <div className="lg:pb-16 md:pb-24 pb-0">
       <Navbar />
       <div className="2xl:px-10 xl:px-8 lg:px-4 md:px-0 mb-10 grid lg:grid-cols-4 md:grid-cols-2 grid-cols-1  max-w-7xl mx-auto">
         <div className="lg:col-span-2">
@@ -48,7 +48,7 @@ export default function HomePage() {
           </section>
         </div>
         <div className="lg:-mt-10 mt-10">
-          <motion.div className="lg:absolute xl:right-30 md:pt-[4rem] lg:right-26 pt-10 -z-10">
+          <motion.div className="lg:absolute xl:right-30 md:pt-[6rem] lg:right-26 pt-10 -z-10">
             <motion.img
               whileInView={{ y: [-100, 0] }}
               transition={{

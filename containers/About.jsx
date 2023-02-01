@@ -9,14 +9,14 @@ export default function About({ about }) {
   return (
     <>
       <section
-        className="min-h-screen md:px-4 w-full overflow-x-hidden max-w-7xl mx-auto justify-center"
+        className="md:px-4 w-full max-w-7xl mx-auto justify-center md:py-20"
         id="about"
       >
-        <div className="w-full lg:mt-2 md:mt-2 mt-[12rem]">
+        <div className="w-full lg:mt-2 md:mt-2 ">
           <h1 className="font-inter md:text-4xl text-2xl px-6 dark:text-slate-200 font-bold text-gray-800">
             About{" "}
             <Link href="/">
-              <span className="text-[#0BBEF2] ">Code</span>Index
+              <span className="text-[#0BBEF2] ">Coding</span>Rah
             </Link>
           </h1>
           <div className="lg:grid lg:grid-cols-2 flex-row px-7 gap-20">

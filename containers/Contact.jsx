@@ -47,8 +47,8 @@ export default function Contact() {
   };
 
   return (
-    <div className=" w-full h-screen md:h-[40rem] mt-10 md:mb-0 mb-32">
-      <section className="h-[38rem] relative md:h-[42rem] lg:px-16 top-10 dark:bg-gray-900 bg-gray-100">
+    <div className=" w-full ">
+      <section className="lg:px-16   dark:bg-gray-900 bg-gray-100">
         <div className="grid md:grid-cols-2 grid-cols-1 mt-10 ">
           <div className="flex flex-col mt-10 space-y-10  md:px-10">
             <div className=" flex items-center justify-around bg-white dark:bg-gray-800  py-7 md:w-[18rem] rounded-md mx-auto w-[20rem]">

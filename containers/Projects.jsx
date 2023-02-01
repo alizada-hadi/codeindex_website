@@ -57,7 +57,7 @@ export default function Projects({ projects }) {
             animate={animatedCard}
             transition={{ duration: 0.5, delayChildren: 0.5 }}
           >
-            <section className=" grid lg:grid-cols-3 max-w-7xl md:grid-cols-2 md:px-2 lg:px-2 mx-auto  grid-cols-1 px-2 mt-10 gap-16">
+            <section className=" grid lg:grid-cols-3 max-w-7xl md:grid-cols-2 md:px-2 lg:px-2 mx-auto  grid-cols-1 px-10 mt-10 gap-16">
               {filterProjects.map((project) => (
                 <ProjectCard
                   key={project._id}

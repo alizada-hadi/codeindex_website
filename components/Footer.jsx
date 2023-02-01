@@ -10,14 +10,14 @@ import {
 
 export default function Footer() {
   return (
-    <div className=" md:pt-[9rem] md:mt-0 mt-[30rem]  bg-[#3C4862] dark:bg-black pt-4 md:px-14 lg:px-18 py-10 px-2  mx-auto  ">
+    <div className="bg-[#3C4862] dark:bg-black pt-4 md:px-14 lg:px-18 py-10 px-2  mx-auto  ">
       <div className="justify-center ">
         <div className="flex flex-col justify-between w-[21rem] -mt-4 ">
           <div className="pt-6 md:pt-0">
-            <div className="font-inter text-xl font-bold ">
+            <div className="font-inter pt-10 text-xl font-bold ">
               {" "}
               <Link href="/">
-                <span className="text-[#0BBEF2]">Code</span>Index
+                <span className="text-[#0BBEF2]">Coding</span>Rah
               </Link>
             </div>
 
@@ -33,27 +33,28 @@ export default function Footer() {
             </h1>
             <Link
               href="#about"
-              className="text-slate-100 md:text-lg text-md font-normal mt-6 font-inter"
+              className="text-slate-100 md:text-md text-md font-normal mt-6 font-inter"
             >
               About
             </Link>
             <br />
             <Link
               href="#team"
-              className="text-slate-100 md:text-lg text-md font-normal mt-2 font-inter"
+              className="text-slate-100 md:text-md text-md font-normal mt-2 font-inter"
             >
               Team
             </Link>
             <br />
             <Link
               href="#blog"
-              className="text-slate-100 md:text-lg text-md font-normal mt-2 font-inter"
+              className="text-slate-100 md:text-md text-md font-normal mt-2 font-inter"
             >
               Blog
             </Link>
+            <br />
             <Link
               href="#projects"
-              className="text-slate-100 text-lg font-normal mt-2 font-inter"
+              className="text-slate-100 text-md font-normal mt-2 font-inter"
             >
               Projects
             </Link>
@@ -65,7 +66,7 @@ export default function Footer() {
             </h1>
             <Link
               href=""
-              className="text-slate-100 md:text-xl text-md  font-normal font-inter"
+              className="text-slate-100 md:text-md text-md  font-normal font-inter"
             >
               info@codeindex.io
             </Link>
@@ -73,11 +74,11 @@ export default function Footer() {
 
             <Link
               href=""
-              className="text-slate-100 md:text-xl text-md  font-normal font-inter"
+              className="text-slate-100 md:text-md text-md  font-normal font-inter"
             >
               0093 747 516 246
             </Link>
-            <p className="text-slate-100 md:text-xl text-md  font-normal font-inter">
+            <p className="text-slate-100 md:text-md text-md  font-normal font-inter">
               13th district Kabul, Afghanistan
             </p>
           </div>
@@ -87,7 +88,7 @@ export default function Footer() {
               Stay up to date
             </h1>
             <form action="" className="">
-              <label className=" md:text-xl text-md font-inter text-slate-200 w-full">
+              <label className=" md:text-md text-md font-inter text-slate-200 w-full">
                 Subscribe to our newsletter
               </label>
               <input
@@ -103,7 +104,7 @@ export default function Footer() {
             <h1 className="md:text-xl text-lg font-bold font-inter text-slate-100 tracking-wide md:pb-2">
               Stay in touch
             </h1>
-            <div className="flex items-center  mx-auto">
+            <div className="flex items-center space-x-4 mx-auto">
               {[
                 { icon: <AiOutlineInstagram />, link: "" },
                 { icon: <AiOutlineLinkedin />, link: "" },
@@ -114,7 +115,7 @@ export default function Footer() {
                 return (
                   <Link
                     key={index}
-                    className="text-white lg:text-5xl md:text-4xl text-3xl text-justify"
+                    className="text-white lg:text-4xl md:text-4xl text-3xl text-justify"
                     href={`${link}`}
                   >
                     {icon}
