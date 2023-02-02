@@ -41,5 +41,6 @@ export async function getStaticProps() {
       team,
       projects,
     },
+    revalidate: 2,
   };
 }
