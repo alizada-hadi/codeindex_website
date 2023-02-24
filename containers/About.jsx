@@ -7,44 +7,49 @@ import { urlFor } from "../client";
 
 export default function About({ about }) {
   return (
-    <>
-      <section
-        className="md:px-4 w-full max-w-7xl mx-auto justify-center md:py-20"
-        id="about"
+    <div className="lg:pb-60  max-w-7xl mx-auto">
+      <motion.div
+        whileInView={{ x: [-100, 0] }}
+        transition={{ duration: 0.6 }}
+        className="px-4"
       >
-        <div className="w-full lg:mt-2 md:mt-2 ">
-          <h1 className="font-inter md:text-4xl text-2xl px-6 dark:text-slate-200 font-bold text-gray-800">
-            About{" "}
-            <Link href="/">
-              <span className="text-[#0BBEF2] ">Coding</span>Rah
-            </Link>
-          </h1>
-          <div className="lg:grid lg:grid-cols-2 flex-row px-7 gap-20">
-            <div className="">
-              <p className="text-justify lg:mt-8 dark:text-slate-200 md:mt-6 font-inter font-medium text-gray-800 tracking-wide text-lg">
-                {about[0].description}
-              </p>
-              <h3 className="mt-3 mb-2 text-xl dark:text-slate-200 font-inter font-semibold text-gray-800">
-                Our Services
-              </h3>
-              {about[0].services.map((service) => (
-                <ServiceCard
-                  key={service._key}
-                  image={service.icon}
-                  title={service.title}
-                  description={service.description}
-                />
-              ))}
-            </div>
-            <div className="">
-              <img
-                className="w-full relative right-4"
-                src={urlFor(about[0].image)}
-              />
-            </div>
-          </div>
+        {" "}
+        <h1 className="pt-[120px] text-[32px] text-[#121127] pb-[18px] font-bold font-poppins">
+          About CodingRah
+        </h1>
+        <p className="max-w-3xl py-5 text-[18px] text-gray font-poppins">
+          {about[0].description}
+        </p>
+      </motion.div>
+      <div className="pt-[70px]">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8 ">
+          {about[0].services.map((service) => (
+            <motion.div
+              whileInView={{ y: [-100, 0] }}
+              transition={{ duration: 0.75 }}
+              className="mx-2"
+              key={service._key}
+            >
+              <div className="px-5 h-96 rounded-lg  xl:mx-0 box-shadow mx-auto">
+                <div className="py-16">
+                  <img src="images/Polygon 1.png" className="-mb-10" alt="" />
+                  <img
+                    className="py-5 w-16"
+                    src={urlFor(service.icon)}
+                    alt="image"
+                  />
+                  <h5 className="py-3 font-poppins font-bold text-[16px]">
+                    {service.title}
+                  </h5>
+                  <p className="font-poppins flex justify-center text-gray">
+                    {service.description}
+                  </p>
+                </div>
+              </div>
+            </motion.div>
+          ))}
         </div>
-      </section>
-    </>
+      </div>
+    </div>
   );
 }

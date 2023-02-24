@@ -11,6 +11,7 @@ module.exports = {
       fontFamily: {
         roboto: "Roboto",
         inter: "Inter",
+        poppins: "poppins",
       },
       boxShadow: {
         custom: "-1px 1px 30px 1px rgba(0,0,0,0.40);",

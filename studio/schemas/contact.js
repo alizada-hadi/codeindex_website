@@ -10,6 +10,11 @@ export default {
       type: 'string',
     },
     {
+      name: 'lastname',
+      title: 'Lastname',
+      type: 'string',
+    },
+    {
       name: 'email',
       title: 'Email',
       type: 'string',
@@ -17,6 +22,11 @@ export default {
     {
       name: 'number',
       title: 'Number',
+      type: 'string',
+    },
+    {
+      name: 'service',
+      title: 'Service',
       type: 'string',
     },
     {

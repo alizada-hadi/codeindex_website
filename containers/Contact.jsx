@@ -1,18 +1,23 @@
 import React, { useState } from "react";
-import { AiOutlinePhone, AiOutlineMail } from "react-icons/ai";
-import { BiMap } from "react-icons/bi";
-import { Footer } from "../components";
+import { BsFillPhoneFill } from "react-icons/bs";
+import { AiOutlineMail, AiOutlineInfoCircle } from "react-icons/ai";
+import { FaRegAddressBook } from "react-icons/fa";
+import { motion } from "framer-motion";
 
 export default function Contact() {
   const [formData, setFormData] = useState({
     name: "",
+    lastname: "",
     email: "",
     number: "",
+    service: "",
     message: "",
   });
+
   const [isFormSubmitted, setIsFormSubmitted] = useState(false);
   const [loading, setLoading] = useState(false);
-  const { name, email, number, message } = formData;
+  const { name, lastname, email, number, service, message } = formData;
+  console.log(lastname, service);
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData({ ...formData, [name]: value });
@@ -24,8 +29,10 @@ export default function Contact() {
     const contact = {
       _type: "contact",
       name: formData.name,
+      lastname: formData.lastname,
       email: formData.email,
       number: formData.number,
+      service: formData.service,
       message: formData.message,
     };
 
@@ -41,138 +48,228 @@ export default function Contact() {
     });
 
     formData.name = "";
+    formData.lastname = "";
     formData.email = "";
     formData.number = "";
     formData.message = "";
   };
 
-  return (
-    <div className=" w-full ">
-      <section className="lg:px-16   dark:bg-gray-900 bg-gray-100">
-        <div className="grid md:grid-cols-2 grid-cols-1 mt-10 ">
-          <div className="flex flex-col mt-10 space-y-10  md:px-10">
-            <div className=" flex items-center justify-around bg-white dark:bg-gray-800  py-7 md:w-[18rem] rounded-md mx-auto w-[20rem]">
-              <AiOutlinePhone className="text-4xl" />
-              <div className="flex flex-col">
-                <h1 className="text-2xl font-roboto ">Call Us</h1>
-                <h4 className="text-lg font-inter">+93-7790-2122-22</h4>
-              </div>
-            </div>
-            <div className="flex items-center justify-around bg-white dark:bg-gray-800  py-7 md:w-[18rem] rounded-md mx-auto w-[20rem]">
-              <BiMap className="text-4xl" />
-              <div className="flex flex-col">
-                <h1 className="text-2xl font-roboto ">Location</h1>
-                <h4 className="text-lg font-inter">Kabul, Afghanistan</h4>
-              </div>
-            </div>
-            <div className="flex items-center justify-around bg-white dark:bg-gray-800  py-7 md:w-[18rem] rounded-md mx-auto w-[20rem]">
-              <AiOutlineMail className="text-4xl" />
-              <div className="flex flex-col">
-                <h1 className="text-2xl font-roboto ">Mail Us</h1>
-                <h4 className="text-lg font-inter">info@codeforgood.com</h4>
-              </div>
-            </div>
-          </div>
-          <div className="w-full lg:h-[41rem] md:h-[43rem] dark:bg-gray-800 border-2 rounded-lg relative -top-20 bg-white shadow-sm shadow-gray-200 mt-24    md:pb-20  mb-10  md:right-4  lg:right-36 ">
-            <div className="mt-6  ">
-              <h2 className="text-3xl font-inter dark:text-slate-300 font-bold tracking-wider text-gray-800 ml-16">
-                Contact Now
-              </h2>
-              <p className="ml-16 font-inter text-lg dark:text-slate-200 font-medium mt-3 text-gray-700">
-                Need help with your web application or mobile app? Our team is
-                here to assist you. Contact us today to get started.{" "}
-                <span className="text-red-600 text-2xl">💖</span>
-              </p>
+  const listIcons = [
+    {
+      icon: <BsFillPhoneFill />,
+      disc: "+93-794-153-462",
+    },
+    {
+      icon: <AiOutlineMail />,
+      disc: "codingrah@gmail.com",
+    },
+    {
+      icon: <AiOutlineInfoCircle />,
+      disc: "https://www.codingrah.com",
+    },
+    {
+      icon: <FaRegAddressBook />,
+      disc: "Kabul, Afghanistan",
+    },
+  ];
+  const radioList = [
+    {
+      radioDis: "Web Design",
+    },
+    {
+      radioDis: "App Design",
+    },
+    {
+      radioDis: "Graphic Design",
+    },
+    {
+      radioDis: "Digital Marketing",
+    },
+    {
+      radioDis: "Other",
+    },
+  ];
 
-              {isFormSubmitted && (
-                <span className="ml-16 text-xl relative top-5 font-inter px-8 py-2 bg-green-500 text-white text-center w-full rounded-md mt-10">
-                  Thank you for your message
-                </span>
-              )}
-              {!isFormSubmitted && (
-                <form onSubmit={handleSubmit} action="" className="mt-6 mx-16">
-                  <div class="relative float-label-input">
-                    <input
-                      type="text"
-                      id="name"
-                      name="name"
-                      value={name}
-                      onChange={handleChange}
-                      required
-                      placeholder=" "
-                      class="block w-full bg-white dark:bg-gray-700 focus:outline-none focus:shadow-outline border border-gray-300 rounded-md py-3 px-3  appearance-none leading-normal focus:border-blue-400"
-                    />
-                    <label
-                      htmlFor="name"
-                      class="absolute top-3 left-2 text-lg text-gray-800 pointer-events-none transition duration-200 ease-in-out px-2 text-grey-darker font-inter"
-                    >
-                      Name
-                    </label>
+  return (
+    <div className="">
+      <div className="pb-28 px-3">
+        <div className="flex flex-col items-center font-poppins  py-10 justify-center">
+          <h1 className="text-3xl text-[48px] font-bold   py-10 pt-20">
+            {" "}
+            Contact us
+          </h1>
+          <p className="text-[18px] max-w-2xl text-gray text-center px-5">
+            Need help with your web application or mobile app? Our team is here
+            to assist you. Contact us today to get started.{" "}
+          </p>
+        </div>
+        <div className="mx-auto">
+          <div className="flex flex-wrap-reverse max-w-7xl  mx-auto">
+            <div className="w-full md:w-1/2 lg:w-1/3  overflow-hidden rounded-xl  pt-20 md:pt-0">
+              <motion.div
+                whileInView={{ y: [-100, 0] }}
+                transition={{ duration: 1 }}
+                className="p-10 bg-[#6854FC] rounded-xl pb-60 relative"
+              >
+                <p className="py-5 text-[24px] text-white">
+                  Contact Information
+                </p>
+                <p className="text-gray-300 pb-5">
+                  Fill up the form and our Team will get back to you within 24
+                  hours.
+                </p>
+                {listIcons.map((list, index) => (
+                  <div className="py-2 flex justify-start ">
+                    <div className="bg-white h-8 w-8 items-center rounded-full relative">
+                      <span className="text-xl absolute left-1.5 top-1.5 text-gray-500">
+                        {list.icon}
+                      </span>
+                    </div>
+                    <span className="mx-5 text-white text-[18px]">
+                      {list.disc}
+                    </span>
                   </div>
-                  <div class="relative float-label-input">
-                    <input
-                      type="email"
-                      id="email"
-                      name="email"
-                      value={email}
-                      onChange={handleChange}
-                      required
-                      placeholder=" "
-                      class="block w-full bg-white dark:bg-gray-700 focus:outline-none focus:shadow-outline border border-gray-300 rounded-md py-3 px-3  appearance-none leading-normal focus:border-blue-400"
-                    />
-                    <label
-                      htmlFor="email"
-                      class="absolute top-3 left-2 text-lg text-gray-800 pointer-events-none transition duration-200 ease-in-out px-2 text-grey-darker font-inter"
-                    >
-                      Email
-                    </label>
-                  </div>
-                  <div class="relative float-label-input">
-                    <input
-                      type="number"
-                      id="number"
-                      name="number"
-                      value={number}
-                      onChange={handleChange}
-                      placeholder=" "
-                      class="block w-full bg-white dark:bg-gray-700 focus:outline-none focus:shadow-outline border border-gray-300 rounded-md py-3 px-3  appearance-none leading-normal focus:border-blue-400"
-                    />
-                    <label
-                      htmlFor="number"
-                      class="absolute top-3 left-2 text-lg text-gray-800 pointer-events-none transition duration-200 ease-in-out px-2 text-grey-darker font-inter"
-                    >
-                      Number
-                    </label>
-                  </div>
-                  <div class="relative float-label-input">
-                    <textarea
-                      id="message"
-                      placeholder=" "
-                      name="message"
-                      value={message}
-                      onChange={handleChange}
-                      rows="3"
-                      class="block w-full bg-white dark:bg-gray-700 focus:outline-none focus:shadow-outline border border-gray-300 rounded-md py-3 px-3  appearance-none leading-normal focus:border-blue-400"
-                    />
-                    <label
-                      htmlFor="message"
-                      class="absolute top-3 left-2 text-gray-800 text-lg pointer-events-none transition duration-200 ease-in-out px-2 text-grey-darker font-inter"
-                    >
-                      Message
-                    </label>
-                  </div>
-                  <button className="mb-8 px-10 text-xl font-semibold font-inter text-slate-100 tracking-wider py-2 border-2 rounded-md bg-[#2F80ED]">
-                    {loading && <span>Sending...</span>}
-                    {!loading && <span>Send</span>}
-                  </button>
-                </form>
-              )}
+                ))}
+                <img
+                  src="images/Ellipse 48.png"
+                  className="absolute bottom-0 right-0"
+                  alt=""
+                />
+                <img
+                  src="images/Ellipse 48.png"
+                  className="h-32 w-36 absolute bottom-0 right-1 "
+                  alt=""
+                />
+              </motion.div>
             </div>
+            <motion.div
+              whileInView={{ y: [-100, 0] }}
+              transition={{ duration: 1.5 }}
+              className="w-full md:w-1/2 lg:w-2/3 lg:col-span-2 h-[38rem] "
+            >
+              {isFormSubmitted && (
+                <p className="ml-10 px-6 py-3 bg-[#6854FC] rounded-md text-white font-poppins">
+                  Thank you for your message. We love to stay in touch with you.
+                </p>
+              )}
+
+              <div className="flex flex-wrap  px-2 relative">
+                <div className=" w-full lg:w-1/2 md:pl-10 lg:py-4 ">
+                  <label
+                    htmlFor=""
+                    className="block text-[18px]  py-2 font-poppins font-semibold"
+                  >
+                    First Name
+                  </label>
+                  <input
+                    type="text"
+                    id="name"
+                    name="name"
+                    value={name}
+                    onChange={handleChange}
+                    required
+                    className="border-b-2 w-full focus:outline-none pt-2 focus:border-[#444BD3] transition-all duration-500 ease-in-out outline-none border-input-border  "
+                  />
+                </div>
+                <div className="w-full lg:w-1/2 md:pl-10 lg:py-4 ">
+                  <label
+                    htmlFor=""
+                    className="block text-[18px] py-2 font-poppins font-semibold "
+                  >
+                    Last Name
+                  </label>
+                  <input
+                    type="text"
+                    className="border-b-2 w-full focus:outline-none pt-2 focus:border-[#444BD3] transition-all duration-500 ease-in-out outline-none border-input-border  "
+                  />
+                </div>
+                <div className="w-full lg:w-1/2 md:pl-10 lg:py-4">
+                  <label
+                    htmlFor=""
+                    className="block text-[18px] py-2 font-poppins font-semibold "
+                  >
+                    Mail
+                  </label>
+                  <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    value={email}
+                    onChange={handleChange}
+                    required
+                    className="border-b-2 w-full focus:outline-none pt-2 focus:border-[#444BD3] transition-all duration-500 ease-in-out outline-none border-input-border  "
+                  />
+                </div>
+                <div className="w-full lg:w-1/2 md:pl-10 lg:py-4">
+                  <label
+                    htmlFor=""
+                    className="block text-[18px] py-2 font-poppins font-semibold "
+                  >
+                    Phone
+                  </label>
+                  <input
+                    type="number"
+                    id="number"
+                    name="number"
+                    value={number}
+                    onChange={handleChange}
+                    className="border-b-2 w-full focus:outline-none pt-2 focus:border-[#444BD3] transition-all duration-500 ease-in-out outline-none border-input-border  "
+                  />
+                </div>
+                <p className="text-[18px] font-poppins flex md:pl-10 pl-0 py-5">
+                  What service do you need?
+                </p>
+                <div className="flex flex-wrap  md:pl-8 pl-0">
+                  {radioList.map((radio) => (
+                    <div class="flex items-center px-2 py-2">
+                      <input
+                        checked
+                        id="default-radio-2"
+                        type="radio"
+                        value=""
+                        name="default-radio"
+                        class="w-5 h-5 text-blue-600 bg-gray-100 outline-none border-gray-300 dark:bg-gray-700 dark:border-gray-600"
+                      />
+                      <label
+                        for="default-radio-2"
+                        class="ml-2 text-[20px] font-medium font-poppins text-gray-900 dark:text-gray-300"
+                      >
+                        {radio.radioDis}
+                      </label>
+                    </div>
+                  ))}
+                </div>
+
+                <div className="w-full  -pb-28 md:pl-10 lg:py-4">
+                  <label
+                    htmlFor=""
+                    className="block text-[18px] py-2 font-poppins font-semibold "
+                  >
+                    Message{" "}
+                  </label>
+                  <textarea
+                    id="message"
+                    name="message"
+                    value={message}
+                    onChange={handleChange}
+                    className="border-b-2 w-full focus:outline-none pt-2 focus:border-[#444BD3] transition-all duration-500 ease-in-out outline-none border-input-border  "
+                    placeholder="Write your massage..."
+                  />
+                </div>
+                <div className="mb-6">
+                  <button
+                    onClick={handleSubmit}
+                    className="relative md:absolute right-0  md:-bottom-20 font-poppins font-semibold py-3 px-8 border border-gray-200  text-white bg-blue hover:bg-blue-800 rounded-3xl hover: mt-4"
+                  >
+                    {loading && <span>Sending...</span>}
+                    {!loading && <span>Send Message</span>}
+                  </button>
+                </div>
+              </div>
+            </motion.div>
           </div>
         </div>
-      </section>
-
-      {/* <Footer /> */}
+      </div>
     </div>
   );
 }
