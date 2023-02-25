@@ -7,7 +7,7 @@ import { urlFor } from "../client";
 
 export default function About({ about }) {
   return (
-    <div className="lg:pb-60  max-w-7xl mx-auto">
+    <div className="lg:pb-60  max-w-7xl mx-auto" id="About">
       <motion.div
         whileInView={{ x: [-100, 0] }}
         transition={{ duration: 0.6 }}

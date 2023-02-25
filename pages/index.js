@@ -18,7 +18,7 @@ export default function Home({ about, team, projects }) {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <main className="">
+      <main className="mx-auto">
         <HomePage />
         <About about={about} />
         <Team team={team} />

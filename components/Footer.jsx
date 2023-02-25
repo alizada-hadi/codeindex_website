@@ -1,14 +1,7 @@
 import React from "react";
 import Link from "next/link";
 
-import { BsFacebook, BsTwitter, BsGithub, BsInstagram } from "react-icons/bs";
-import { GoSearch } from "react-icons/go";
-const listSocialIcons = [
-  <BsFacebook />,
-  <BsTwitter />,
-  <BsGithub />,
-  <BsInstagram />,
-];
+import { BsFacebook, BsTwitter, BsGithub, BsLinkedin } from "react-icons/bs";
 
 export default function Footer() {
   return (
@@ -16,14 +9,21 @@ export default function Footer() {
       <div className="flex justify-center items-center">
         <div className="grid grid-cols-2 lg:grid-cols-4 gap-10 pt-5 py-10 px-4">
           <div className="text-gray-300 flex flex-col space-y-5">
-            {/* <img src="" alt="" /> */}
-            <h2 className="text-3xl color-blue">Logo</h2>
+            <img src="images/logo20.png" width={200} alt="" />
             <p>We Craft Beautiful App and User Interface</p>
-            <div className="flex space-x-6 ">
-              {" "}
-              {listSocialIcons.map((icon) => (
-                <dvi className="flex text-2xl cursor-pointer">{icon}</dvi>
-              ))}
+            <div className="flex text-2xl space-x-6 ">
+              <Link href={""}>
+                <BsFacebook />
+              </Link>
+              <Link href={""}>
+                <BsTwitter />
+              </Link>
+              <Link href={""}>
+                <BsGithub />
+              </Link>
+              <Link href={""}>
+                <BsLinkedin />
+              </Link>
             </div>
           </div>
 

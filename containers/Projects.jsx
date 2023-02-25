@@ -29,7 +29,7 @@ export default function Projects({ projects }) {
   };
   const lists = ["All", "Mobile App", "Web", "Desktop", "UI/UX"];
   return (
-    <div className="pb-24 lg:pb-48 relative" id="projects">
+    <div className="pb-24 lg:pb-48 relative" id="Projects">
       <section className="max-w-7xl items-center mx-auto ">
         <h1 className=" pt-16 text-center font-bold text-4xl font-poppins">
           Our Recent Projects

@@ -4,10 +4,10 @@ import { motion } from "framer-motion";
 
 export default function HomePage() {
   return (
-    <div className="pb-72 bg-gradient ">
+    <div className="pb-72 bg-gradient " id="Home">
       <div className="w-full md:max-w-7xl mx-auto px-5 ">
         <Navbar />
-        <div className="relative pt-[90px] sm:pt-[0px] md:pt-[100px] xl:pt-[190px] mx-auto ">
+        <div className="relative pt-[90px] sm:pt-[70px] md:pt-[100px] xl:pt-[190px] mx-auto ">
           <motion.h1
             whileInView={{ x: [-100, 0] }}
             transition={{ duration: 0.5 }}
@@ -59,7 +59,7 @@ export default function HomePage() {
           whileInView={{ x: [-100, 0] }}
           transition={{ duration: 0.6 }}
           className="absolute md:top-[400px] xl:top-[570px]  hidden md:block md:right-[130px] lg:right-[269px] xl:right-[500px]"
-          src="images/img.png"
+          src="images/Image (1).png"
           alt=""
         />
       </div>

@@ -2,7 +2,10 @@ import React from "react";
 
 export default function Blog() {
   return (
-    <div className="py-14 flex flex-col space-y-10 bg-[#F2F3FF] items-center ">
+    <div
+      className="py-14 flex flex-col space-y-10 bg-[#F2F3FF] items-center "
+      id="Blog"
+    >
       <h1 className="text-[48px] font-poppins text-center font-bold">
         Explore our Blog
       </h1>

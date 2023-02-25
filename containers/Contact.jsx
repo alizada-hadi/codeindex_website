@@ -10,14 +10,13 @@ export default function Contact() {
     lastname: "",
     email: "",
     number: "",
-    service: "",
+    service: "other",
     message: "",
   });
 
   const [isFormSubmitted, setIsFormSubmitted] = useState(false);
   const [loading, setLoading] = useState(false);
   const { name, lastname, email, number, service, message } = formData;
-  console.log(lastname, service);
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData({ ...formData, [name]: value });
@@ -91,7 +90,7 @@ export default function Contact() {
   ];
 
   return (
-    <div className="">
+    <div className="" id="Contact">
       <div className="pb-28 px-3">
         <div className="flex flex-col items-center font-poppins  py-10 justify-center">
           <h1 className="text-3xl text-[48px] font-bold   py-10 pt-20">
@@ -180,6 +179,10 @@ export default function Contact() {
                   </label>
                   <input
                     type="text"
+                    id="name"
+                    name="lastname"
+                    value={lastname}
+                    onChange={handleChange}
                     className="border-b-2 w-full focus:outline-none pt-2 focus:border-[#444BD3] transition-all duration-500 ease-in-out outline-none border-input-border  "
                   />
                 </div>
@@ -220,24 +223,91 @@ export default function Contact() {
                   What service do you need?
                 </p>
                 <div className="flex flex-wrap  md:pl-8 pl-0">
-                  {radioList.map((radio) => (
-                    <div class="flex items-center px-2 py-2">
-                      <input
-                        checked
-                        id="default-radio-2"
-                        type="radio"
-                        value=""
-                        name="default-radio"
-                        class="w-5 h-5 text-blue-600 bg-gray-100 outline-none border-gray-300 dark:bg-gray-700 dark:border-gray-600"
-                      />
-                      <label
-                        for="default-radio-2"
-                        class="ml-2 text-[20px] font-medium font-poppins text-gray-900 dark:text-gray-300"
-                      >
-                        {radio.radioDis}
-                      </label>
-                    </div>
-                  ))}
+                  <div class="flex items-center px-2 py-2">
+                    <input
+                      id="web-design"
+                      type="radio"
+                      value="Web Design"
+                      checked={formData.service === "Web Design"}
+                      onChange={handleChange}
+                      name="service"
+                      class="w-5 h-5 text-blue-600 bg-gray-100 outline-none border-gray-300 dark:bg-gray-700 dark:border-gray-600"
+                    />
+                    <label
+                      for="web-design"
+                      class="ml-2 text-[20px] font-medium font-poppins text-gray-900 dark:text-gray-300"
+                    >
+                      Web Design
+                    </label>
+                  </div>
+                  <div class="flex items-center px-2 py-2">
+                    <input
+                      id="app-design"
+                      type="radio"
+                      value="Application Design"
+                      checked={formData.service === "Application Design"}
+                      name="service"
+                      onChange={handleChange}
+                      class="w-5 h-5 text-blue-600 bg-gray-100 outline-none border-gray-300 dark:bg-gray-700 dark:border-gray-600"
+                    />
+                    <label
+                      for="app-design"
+                      class="ml-2 text-[20px] font-medium font-poppins text-gray-900 dark:text-gray-300"
+                    >
+                      App Design
+                    </label>
+                  </div>
+                  <div class="flex items-center px-2 py-2">
+                    <input
+                      id="graphic-design"
+                      type="radio"
+                      value="Graphic Design"
+                      checked={formData.service === "Graphic Design"}
+                      onChange={handleChange}
+                      name="service"
+                      class="w-5 h-5 text-blue-600 bg-gray-100 outline-none border-gray-300 dark:bg-gray-700 dark:border-gray-600"
+                    />
+                    <label
+                      for="graphic-design"
+                      class="ml-2 text-[20px] font-medium font-poppins text-gray-900 dark:text-gray-300"
+                    >
+                      Graphic Design
+                    </label>
+                  </div>
+                  <div class="flex items-center px-2 py-2">
+                    <input
+                      id="digital-marketing"
+                      type="radio"
+                      value="Digital Marketing"
+                      checked={formData.service === "Digital Marketing"}
+                      onChange={handleChange}
+                      name="service"
+                      class="w-5 h-5 text-blue-600 bg-gray-100 outline-none border-gray-300 dark:bg-gray-700 dark:border-gray-600"
+                    />
+                    <label
+                      for="digital-marketing"
+                      class="ml-2 text-[20px] font-medium font-poppins text-gray-900 dark:text-gray-300"
+                    >
+                      Digital Marketing
+                    </label>
+                  </div>
+                  <div class="flex items-center px-2 py-2">
+                    <input
+                      id="other"
+                      type="radio"
+                      value="other"
+                      onChange={handleChange}
+                      checked={formData.service === "other"}
+                      name="service"
+                      class="w-5 h-5 text-blue-600 bg-gray-100 outline-none border-gray-300 dark:bg-gray-700 dark:border-gray-600"
+                    />
+                    <label
+                      for="other"
+                      class="ml-2 text-[20px] font-medium font-poppins text-gray-900 dark:text-gray-300"
+                    >
+                      Other
+                    </label>
+                  </div>
                 </div>
 
                 <div className="w-full  -pb-28 md:pl-10 lg:py-4">
