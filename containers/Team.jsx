@@ -85,7 +85,7 @@ export default function Team({ team }) {
         <div className="flex pt-32 "></div>
         <Slider
           {...settings}
-          className="pl-10 md:pl-16 lg:pl-0  overflow-hidden "
+          className="pl-10 md:pl-16 lg:pl-0 overflow-hidden "
         >
           {team[0].member.map((item) => (
             <div

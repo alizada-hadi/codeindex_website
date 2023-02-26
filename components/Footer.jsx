@@ -46,9 +46,9 @@ export default function Footer() {
           </div>
           <div className="">
             <p className="text-footer py-5 text-md">CAMPANY</p>
-            <ul className="text-white">
+            <ul className="text-white font-poppins">
               <li>
-                <Link href={"#"}>info@codeindex.io</Link>
+                <Link href={"#"}>codingrah@gmail.com</Link>
               </li>
               <li>
                 <Link href={"#"}>0093 747 516 246</Link>
