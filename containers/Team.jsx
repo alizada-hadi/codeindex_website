@@ -99,7 +99,7 @@ export default function Team({ team }) {
                   <img
                     src={urlFor(item.profile)}
                     alt=""
-                    className=" rounded-lg h-[330px] w-[270px]"
+                    className=" rounded-lg h-[330px] w-[270px] object-cover"
                   />
                   <div className="overflow-hidden absolute flex items-center flex-col w-[230px] z-50 h-[83px] left-[40px] bottom-5 text-[#212B36] py-2 rounded-lg bg-white shadow-md">
                     <div className="absolute object-cover">
