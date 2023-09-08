@@ -11,13 +11,12 @@ export default function About({ about }) {
       <motion.div
         whileInView={{ x: [-100, 0] }}
         transition={{ duration: 0.6 }}
-        className="px-4"
-      >
+        className="px-4">
         {" "}
-        <h1 className="pt-[120px] text-[32px] text-[#121127] pb-[18px] font-bold font-poppins">
+        <h1 className="pt-[120px] text-[32px] text-center text-[#121127] pb-[18px] font-bold font-poppins">
           About CodingRah
         </h1>
-        <p className="max-w-3xl py-5 text-[18px] text-gray font-poppins">
+        <p className="max-w-3xl mx-auto py-5 text-[18px] text-center justify-center  text-gray font-poppins">
           {about[0].description}
         </p>
       </motion.div>
@@ -28,8 +27,7 @@ export default function About({ about }) {
               whileInView={{ y: [-100, 0] }}
               transition={{ duration: 0.75 }}
               className="mx-2"
-              key={service._key}
-            >
+              key={service._key}>
               <div className="px-5 h-96 rounded-lg  xl:mx-0 box-shadow mx-auto">
                 <div className="py-16">
                   <img src="images/Polygon 1.png" className="-mb-10" alt="" />
