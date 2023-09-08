@@ -11,29 +11,30 @@ export default function HomePage() {
           <motion.h1
             whileInView={{ x: [-100, 0] }}
             transition={{ duration: 0.5 }}
-            className="text-[34px] pr-10 md:pr-0 lg:leading-[75px] font-poppins md:text-[40px]  lg:text-[56px] md:w-[495px] text-[#070E25] font-bold"
-          >
+            className="text-[34px] pr-10 md:pr-0 lg:leading-[75px] font-poppins md:text-[40px]  lg:text-[56px] md:w-[495px] text-[#070E25] font-bold">
             We Code Delightful Digital Experiences
           </motion.h1>
           <motion.p
             whileInView={{ x: [-100, 0] }}
             transition={{ duration: 0.75 }}
-            className="text-gray pt-[12px] font-poppins text-[20px] w-full md:w-[456px]"
-          >
+            className="text-gray pt-[12px] font-poppins text-[20px] w-full md:w-[456px]">
             We strive to make your work easier by working hard to deliver
             high-quality solutions.
           </motion.p>
           <motion.div
             whileInView={{ x: [-100, 0] }}
             transition={{ duration: 1 }}
-            className="pt-12 flex justify-between  md:justify-start space-x-3 md:space-x-6"
-          >
-            <button className="bg-blue font-poppins hover:bg-indigo-500 py-3 px-10 text-white rounded-md transition-all ease-in-out duration-200 ">
+            className="pt-12 flex justify-between  md:justify-start space-x-3 md:space-x-6">
+            <a
+              href="#About"
+              className="bg-blue font-poppins hover:bg-indigo-500 py-3 px-10 text-white rounded-md transition-all ease-in-out duration-200 ">
               Get Started
-            </button>
-            <button className="shadow-sm mx-10 font-poppins text-gray-900 py-3 border border-gray-400 hover:bg-indigo-600 hover:text-white transition-all ease-in-out duration-500 rounded-md px-7">
+            </a>
+            <a
+              href="#Blog"
+              className="shadow-sm mx-10 font-poppins text-gray-900 py-3 border border-gray-400 hover:bg-indigo-600 hover:text-white transition-all ease-in-out duration-500 rounded-md px-7">
               Learn more
-            </button>
+            </a>
           </motion.div>
         </div>
         <motion.img
@@ -47,8 +48,7 @@ export default function HomePage() {
         <motion.div
           whileInView={{ y: [-100, 0] }}
           transition={{ duration: 0.4 }}
-          className="absolute md:top-[133px] xl:top-[166px] hidden md:block md:right-[26px] lg:right-[69px]  xl:right-[289px]"
-        >
+          className="absolute md:top-[133px] xl:top-[166px] hidden md:block md:right-[26px] lg:right-[69px]  xl:right-[289px]">
           <img
             className="md:h-[440px] lg:h-full"
             src="images/Phone Front 1.png"
